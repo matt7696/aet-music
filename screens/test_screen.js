@@ -3,6 +3,7 @@ export default function TestScreen() {
     return ( 
       <View style={styles.container}>
         <Text>test screen guys!</Text>
+        <Text>this is a working app fr!</Text>
       </View>
     );
   }
