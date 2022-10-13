@@ -1,9 +1,9 @@
 import { StyleSheet, Text, View } from 'react-native'
-import TestScreen from "./screens/test_screen.js"
+import DiscoveryScreen from "./screens/Discovery_Screen.js"
 
 export default function App() {
   return (
-    <TestScreen/>
+    <DiscoveryScreen/>
   );
 }
 

@@ -1,8 +1,9 @@
 import { StyleSheet, Text, View } from 'react-native'
-export default function TestScreen() {
+
+export default function DiscoveryScreen() {
     return ( 
       <View style={styles.container}>
-        <Text>test screen guys!</Text>
+        <Text style={stylez.textColor}>Discovery Page</Text>
       </View>
     );
   }
@@ -10,10 +11,14 @@ export default function TestScreen() {
   const styles = StyleSheet.create({
     container: {
       flex: 1,
-      backgroundColor: '#fff',
+      backgroundColor: '#040f2f',
       alignItems: 'center',
       justifyContent: 'center',
     },
-  })
+    })
 
-  
+    const stylez = StyleSheet.create({
+        textColor: {
+            color: 'white'
+        }
+    })
