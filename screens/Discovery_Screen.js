@@ -72,5 +72,7 @@ export default function DiscoveryScreen() {
             top: -100,
         },
         homeButton: {
+            top: 500,
+            left: 100,
         }
     })
