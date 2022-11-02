@@ -1,15 +1,13 @@
 import { StyleSheet, Text, View, TouchableOpacity, ImageBackground, StatusBar} from 'react-native'
 
-  //idk where to put these vars
-  var songTitle = 'no hay ley'
-  var artist = 'Kali Uchis'
-  var albumCover = '../assets/album-cover.png'
-export default function DiscoveryScreen() {
+
+export default function DiscoveryScreen({artist, songTitle, album}) {
     return ( 
       <View style={styles.container}>
         <StatusBar barStyle="light-content" />
+        
          <ImageBackground 
-            source={require(albumCover)}
+            source={require('../assets/album-cover.png')}
             style={styles.backgroundImage}
          >  
         </ImageBackground>
@@ -18,18 +16,20 @@ export default function DiscoveryScreen() {
             style={styles.rectangle}
          >  
         </ImageBackground>
+        
         <Text 
             style={styles.header}>
             Discovery Page
         </Text>
         <Text 
             style={styles.songTitle}>
-            {songTitle}
+            uh
         </Text>
         <Text 
             style={styles.artist}>
-            {artist}
-        </Text>
+            huh
+        </Text> 
+        
         <TouchableOpacity 
             style = {styles.homeButton}
         >     
@@ -49,13 +49,13 @@ export default function DiscoveryScreen() {
 
   const styles = StyleSheet.create({
     container: {
-      flex: 1,
+        flex: 1
     },
     backgroundImage: {
         position: 'absolute',
-        height: '102%',
-        width: '120%',
-        top: -5,
+        height: 850,
+        width: 600,
+        left: -10
     },
     rectangle: {
         position: 'absolute',
