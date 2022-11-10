@@ -1,7 +1,11 @@
 import { StyleSheet, View, FlatList, Dimensions, ImageBackground, Text, TouchableOpacity } from 'react-native'
+import {useState} from 'react'
 import DiscoveryScreen from './Discovery_Screen'
+import ArtistScreen from './Artist_Screen'
+import GestureRecognizer, {swipeDirections} from 'react-native-swipe-gestures';
 
-const sampleData = [
+
+const songs = [
   {
     artist: "sampleArtist",
     title: "sampleTitle",
@@ -14,19 +18,32 @@ const sampleData = [
   },
 ]
 
+const artist = [
+  
+]
+
+
+
 export default function ScreenScroller() {
+
+  const [horizontal, setHorizontal] = useState(false);
 
   return (
     <View style={styles.container}>
-      <FlatList
-        snapToAlignment='start'
-        snapToInterval={Dimensions.get("window").height}
-        decelerationRate='fast'
-        data={sampleData}
-        renderItem={({ item }) => (
-          <DiscoveryScreen artist={item.artist} title={item.title} uri={item.title}/>
-        )}
-      />
+      <GestureRecognizer
+        onSwipeLeft={(state) => setHorizontal(false)}
+      >
+        <FlatList
+          snapToAlignment='start'
+          snapToInterval={Dimensions.get("window").height}
+          decelerationRate='fast'
+          data={songs}
+          horizontal = {horizontal}
+          renderItem={({ item }) => (
+            <DiscoveryScreen artist={item.artist} title={item.title} uri={item.title}/>
+          )}
+        />
+        </GestureRecognizer>
       <ImageBackground 
             source={require("../assets/black-rectangle.png")}
             style={styles.rectangle}

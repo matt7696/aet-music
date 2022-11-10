@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View, TouchableOpacity, ImageBackground, StatusBar} from 'react-native'
+import { StyleSheet, Text, View, Dimensions, ImageBackground, StatusBar} from 'react-native'
 
 
 export default function DiscoveryScreen({artist, songTitle, album}) {
@@ -31,9 +31,10 @@ export default function DiscoveryScreen({artist, songTitle, album}) {
         flex: 1
     },
     backgroundImage: {
-        height: 850,
-        width: 600,
-        left: -10
+        flex: 1,
+        height: Dimensions.get('window').height,
+        width: Dimensions.get('window').width,
+        left: 0
     },
     songTitle: {
         position: 'absolute',
