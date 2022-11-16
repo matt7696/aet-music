@@ -1,7 +1,8 @@
-import { StyleSheet, View, FlatList, Dimensions, ImageBackground, Text, TouchableOpacity } from 'react-native'
+import {StyleSheet, View, FlatList, Dimensions, ImageBackground, Text, TouchableOpacity } from 'react-native'
 import {useState} from 'react'
 import DiscoveryScreen from './Discovery_Screen'
 import GestureRecognizer, {swipeDirections} from 'react-native-swipe-gestures';
+
 
 
 const songs = [
@@ -15,22 +16,44 @@ const songs = [
     title: "title 2",
     uri: "uri 2"
   },
+  {
+    artist: "artist 2",
+    title: "title 2",
+    uri: "uri 2"
+  },
+  {
+    artist: "artist 2",
+    title: "title 2",
+    uri: "uri 2"
+  },
+  {
+    artist: "artist 2",
+    title: "title 2",
+    uri: "uri 2"
+  },
+  {
+    artist: "artist 2",
+    title: "title 2",
+    uri: "uri 2"
+  },
+  {
+    artist: "artist 2",
+    title: "title 2",
+    uri: "uri 2"
+  },
 
 ]
 
-const artist = [
-  
-]
 
 
 
 export default function ScreenScroller() {
 
-  const [horizontal, setHorizontal] = useState(true);
-  const [snap, setWidth] = useState(Dimensions.get("window").width);
+  const [horizontal, setHorizontal] = useState(false);
+  const [snap, setWidth] = useState(Dimensions.get("window").height);
+  const [count, update] = useState();
 
-
-
+  let index = 0;
 
   return (
     <View style={styles.container}>
@@ -41,12 +64,13 @@ export default function ScreenScroller() {
           snapToInterval={snap}
           decelerationRate='fast'
           data={songs}
+          index={count}
           horizontal = {horizontal}
           renderItem={({ item }) => (
             <GestureRecognizer
             onSwipeLeft={(state) => {setHorizontal(true); setWidth(Dimensions.get("window").width);}}
-            onSwipeUp={(state) => {setHorizontal(false); setWidth(Dimensions.get("window").height);}}
-            onSwipeDown={(state) => {setHorizontal(false); setWidth(Dimensions.get("window").height);}}
+            onSwipeUp={(state) => {setHorizontal(false); setWidth(Dimensions.get("window").height); update();}}
+            onSwipeDown={(state) => {setHorizontal(false);setWidth(Dimensions.get("window").height); update()}}
           >
             <DiscoveryScreen artist={item.artist} title={item.title} uri={item.title}/>
             </GestureRecognizer>
