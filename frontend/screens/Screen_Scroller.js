@@ -7,47 +7,32 @@ import GestureRecognizer, {swipeDirections} from 'react-native-swipe-gestures';
 
 const songs = [
   {
-    artist: "sampleArtist",
-    title: "sampleTitle",
-    uri: "sampleUri"
+    artist: "Kali Uchis",
+    title: "NO HAY LEY",
+    albumT: "'../assets/album-cover.png'"
   },
   {
-    artist: "artist 2",
-    title: "title 2",
-    uri: "uri 2"
+    artist: "Boy Pablo",
+    title: "hey girl",
+    albumT: "'../assets/album-cover-hey-girl.png'"
   },
   {
-    artist: "artist 2",
-    title: "title 2",
-    uri: "uri 2"
-  },
-  {
-    artist: "artist 2",
-    title: "title 2",
-    uri: "uri 2"
-  },
-  {
-    artist: "artist 2",
-    title: "title 2",
-    uri: "uri 2"
-  },
-  {
-    artist: "artist 2",
-    title: "title 2",
-    uri: "uri 2"
-  },
-  {
-    artist: "artist 2",
-    title: "title 2",
-    uri: "uri 2"
-  },
+    artist: "Bad Bunny",
+    title: "Titi Me Preguno",
+    albumT: "'../assets/album-cover-idk.png'"
+  }
 
 ]
 
 
 
+export default function ScreenScroller({navigation}) {
 
-export default function ScreenScroller() {
+  const handleSwipeLeft = (artistName) => {
+    navigation.navigate("Artist", {
+      artist: artistName,
+    })
+  }
 
   const [horizontal, setHorizontal] = useState(false);
   const [snap, setWidth] = useState(Dimensions.get("window").height);
@@ -68,11 +53,9 @@ export default function ScreenScroller() {
           horizontal = {horizontal}
           renderItem={({ item }) => (
             <GestureRecognizer
-            onSwipeLeft={(state) => {setHorizontal(true); setWidth(Dimensions.get("window").width);}}
-            onSwipeUp={(state) => {setHorizontal(false); setWidth(Dimensions.get("window").height); update();}}
-            onSwipeDown={(state) => {setHorizontal(false);setWidth(Dimensions.get("window").height); update()}}
+            onSwipeLeft={() => {handleSwipeLeft(item.artist)}}
           >
-            <DiscoveryScreen artist={item.artist} title={item.title} uri={item.title}/>
+            <DiscoveryScreen artist={item.artist} songTitle={item.title} album={item.albumT}/>
             </GestureRecognizer>
           )}
         />
@@ -99,6 +82,7 @@ export default function ScreenScroller() {
     </View>
   );
 }
+
 
 
 const styles = StyleSheet.create({

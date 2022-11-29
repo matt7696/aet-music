@@ -5,19 +5,20 @@ export default function DiscoveryScreen({artist, songTitle, album}) {
     return ( 
       <View style={styles.container}>
         <StatusBar barStyle="light-content" />
-        
+
          <ImageBackground 
+            // how do i change album cover
             source={require('../assets/album-cover.png')}
             style={styles.backgroundImage}
          >  
         </ImageBackground>
         <Text 
             style={styles.songTitle}>
-            uh
+            {songTitle}
         </Text>
         <Text 
             style={styles.artist}>
-            huh
+            {artist}
         </Text> 
     
       </View>
@@ -39,7 +40,6 @@ export default function DiscoveryScreen({artist, songTitle, album}) {
     songTitle: {
         position: 'absolute',
         fontWeight: 'bold',
-        textTransform:'uppercase',
         left: 29,
         top: 630,
         fontSize: 35,
