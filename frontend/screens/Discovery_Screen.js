@@ -8,7 +8,7 @@ export default function DiscoveryScreen({artist, songTitle, album}) {
 
          <ImageBackground 
             // how do i change album cover
-            source={require('../assets/album-cover.png')}
+            source={require('../assets/album-cover-hey-girl.png')}
             style={styles.backgroundImage}
          >  
         </ImageBackground>
