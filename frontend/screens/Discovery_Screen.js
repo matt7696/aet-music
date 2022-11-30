@@ -1,14 +1,20 @@
 import { StyleSheet, Text, View, Dimensions, ImageBackground, StatusBar} from 'react-native'
 
+const albumCovers = {
+    "album1" : require("../assets/album-cover.png"),
+    "album2" : require("../assets/album-cover-hey-girl.png"),
+    "album3" : require("../assets/album-cover-idk.png")
+}
+
 
 export default function DiscoveryScreen({artist, songTitle, album}) {
+    // 🤠
     return ( 
       <View style={styles.container}>
         <StatusBar barStyle="light-content" />
 
          <ImageBackground 
-            // how do i change album cover
-            source={require('../assets/album-cover-hey-girl.png')}
+            source={albumCovers[album]}
             style={styles.backgroundImage}
          >  
         </ImageBackground>

@@ -9,17 +9,17 @@ const songs = [
   {
     artist: "Kali Uchis",
     title: "NO HAY LEY",
-    albumT: "'../assets/album-cover.png'"
+    albumT: "album1"
   },
   {
     artist: "Boy Pablo",
     title: "hey girl",
-    albumT: "'../assets/album-cover-hey-girl.png'"
+    albumT: "album2"
   },
   {
     artist: "Bad Bunny",
     title: "Titi Me Preguno",
-    albumT: "'../assets/album-cover-idk.png'"
+    albumT: "album3"
   }
 
 ]
@@ -54,7 +54,7 @@ export default function ScreenScroller({navigation}) {
           renderItem={({ item }) => (
             <GestureRecognizer
             onSwipeLeft={() => {handleSwipeLeft(item.artist)}}
-          >
+            >
             <DiscoveryScreen artist={item.artist} songTitle={item.title} album={item.albumT}/>
             </GestureRecognizer>
           )}
