@@ -7,19 +7,34 @@ import GestureRecognizer, {swipeDirections} from 'react-native-swipe-gestures';
 
 const songs = [
   {
-    artist: "Kali Uchis",
-    title: "NO HAY LEY",
+    artist: "Eric Lumiere",
+    title: "Breaking Into Love",
     albumT: "album1"
   },
   {
-    artist: "Boy Pablo",
-    title: "hey girl",
+    artist: "Ode to Her",
+    title: "Ivan Orozco",
     albumT: "album2"
   },
   {
-    artist: "Bad Bunny",
-    title: "Titi Me Preguno",
+    artist: "Rosie Thomas",
+    title: "Should Be Together",
     albumT: "album3"
+  },
+  {
+    artist: "Kali Uchis",
+    title: "NO HAY LEY",
+    albumT: "album4"
+  },
+  {
+    artist: "NORMANDY",
+    title: "Control",
+    albumT: "album5"
+  },
+  {
+    artist: "Kanye East",
+    title: "Oh Shit",
+    albumT: "album6"
   }
 
 ]
