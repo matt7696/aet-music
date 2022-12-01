@@ -49,6 +49,12 @@ export default function ScreenScroller({navigation}) {
     })
   }
 
+  const handleSwipeRight = (artistName) => {
+    navigation.navigate("Artist2", {
+      artist: artistName,
+    })
+  }
+
   const [horizontal, setHorizontal] = useState(false);
   const [snap, setWidth] = useState(Dimensions.get("window").height);
   const [count, update] = useState();
@@ -69,6 +75,7 @@ export default function ScreenScroller({navigation}) {
           renderItem={({ item }) => (
             <GestureRecognizer
             onSwipeLeft={() => {handleSwipeLeft(item.artist)}}
+            onSwipeRight={() => {handleSwipeRight(item.artist)}}
             >
             <DiscoveryScreen artist={item.artist} songTitle={item.title} album={item.albumT}/>
             </GestureRecognizer>
