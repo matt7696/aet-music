@@ -21,11 +21,11 @@ const App = () => {
 
   return (
     <View style={styles.containerb1}>
-         <ImageBackground source={require('../assets/kaliArtist.png')} style={styles.backgroundImage}blurRadius = {3}>
+         <ImageBackground source={require('../assets/2ndArtist.png')} style={styles.backgroundImage}blurRadius = {3}>
 
       <View style={styles.label}> 
 
-        <Text style = {styles.ArtistName}>Kali Uchis</Text>
+        <Text style = {styles.ArtistName}>Rosie Thomas</Text>
         
         <TouchableOpacity 
             source={require("../assets/verticaldotsicon.png")}
@@ -95,49 +95,48 @@ const App = () => {
       </TouchableOpacity>
 
       <ImageBackground 
-            source={require("../assets/albumone.png")}
+            source={require("../assets/Chris.png")}
             style={styles.album1}
          >  
         </ImageBackground>
 
         <ImageBackground 
-            source={require("../assets/album2.png")}
+            source={require("../assets/Very.png")}
             style={styles.album2}
          >  
         </ImageBackground>
 
         <ImageBackground 
-            source={require("../assets/album3.png")}
+            source={require("../assets/friends.png")}
             style={styles.album3}
          >  
         </ImageBackground>
 
         <ImageBackground 
-            source={require("../assets/album4.png")}
+            source={require("../assets/held.png")}
             style={styles.album4}
          >  
         </ImageBackground>
 
-        <Text style = {styles.album1title}>Sin Miedo (del Amor y Otros{"\n"}</Text>
-        <Text style = {styles.album11title}>Demonios) [Deluxe Version]</Text>
-        <Text style = {styles.album2title}>Sin Miedo (del Amor y Otros </Text>
-        <Text style = {styles.album22title}>Demonios) </Text>
-        <Text style = {styles.album3title}>Isolation</Text>
-        <Text style = {styles.album4title}>Por Vida</Text>
+        <Text style = {styles.album1title}>With Love (10th Anniversary{"\n"}</Text>
+        <Text style = {styles.album11title}> Edition)</Text>
+        <Text style = {styles.album2title}>A Very Rosie (Expanded Edition) </Text>
+        <Text style = {styles.album3title}>These Friends of Mine</Text>
+        <Text style = {styles.album4title}>If Songs Could Be Held</Text>
 
-        <Text style = {styles.songInfo1}>2020 | R&B/Soul</Text>
-        <Text style = {styles.songInfo11}>13 songs</Text>
+        <Text style = {styles.songInfo1}>2022 | Folk</Text>
+        <Text style = {styles.songInfo11}>12 songs</Text>
 
-        <Text style = {styles.songInfo2}>2020 | R&B/Soul</Text>
+        <Text style = {styles.songInfo2}>2018 | Folk</Text>
         <Text style = {styles.songInfo22}>13 songs</Text>
 
-        <Text style = {styles.songInfo3}>2018 | Latin</Text>
-        <Text style = {styles.songInfo33}>13 songs</Text>
+        <Text style = {styles.songInfo3}>2007 | Folk</Text>
+        <Text style = {styles.songInfo33}>12 songs</Text>
 
-        <Text style = {styles.songInfo4}>2015 | Latin</Text>
-        <Text style = {styles.songInfo44}>13 songs</Text>
+        <Text style = {styles.songInfo4}>2006 | Folk</Text>
+        <Text style = {styles.songInfo44}>11 songs</Text>
 
-      <ImageBackground source={require("../assets/kaliArtist.png")} style = {styles.ArtistImage}/>
+      <ImageBackground source={require("../assets/2ndArtist.png")} style = {styles.ArtistImage}/>
 
 
       </View>   
@@ -278,7 +277,7 @@ const styles = StyleSheet.create({
   ArtistName:{
     position: "absolute",
     marginTop: -80,
-    marginLeft: 150,
+    marginLeft: 130,
     fontStyle: "normal",
     fontWeight: "500",
     fontSize: 20,
@@ -437,7 +436,7 @@ album4title:{
 },
 songInfo1:{
   position: "absolute",
-  marginTop: 115,
+  marginTop: 125,
   marginLeft: 150,
   fontStyle: "normal",
   fontWeight: "400",
@@ -449,7 +448,7 @@ songInfo1:{
 },
 songInfo11:{
   position: "absolute",
-  marginTop: 130,
+  marginTop: 140,
   marginLeft: 150,
   fontStyle: "normal",
   fontWeight: "400",
@@ -545,8 +544,5 @@ dots:{
 
 export default App;
   
-
-    
-   
 
     
