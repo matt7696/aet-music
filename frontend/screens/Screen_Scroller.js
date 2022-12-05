@@ -12,8 +12,8 @@ const songs = [
     albumT: "album1"
   },
   {
-    artist: "Ode to Her",
-    title: "Ivan Orozco",
+    artist: "Ivan Orozco",
+    title: "Ode to Her",
     albumT: "album2"
   },
   {
