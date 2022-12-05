@@ -18,24 +18,14 @@ const songs = [
   },
   {
     artist: "Rosie Thomas",
-    title: "Should Be Together",
+    title: "It Don't Matter Sun",
     albumT: "album3"
   },
   {
-    artist: "Kali Uchis",
-    title: "NO HAY LEY",
+    artist: "Adam Christopher",
+    title: "Iris - Acoustic",
     albumT: "album4"
   },
-  {
-    artist: "NORMANDY",
-    title: "Control",
-    albumT: "album5"
-  },
-  {
-    artist: "Kanye East",
-    title: "Oh Shit",
-    albumT: "album6"
-  }
 
 ]
 
@@ -44,13 +34,13 @@ const songs = [
 export default function ScreenScroller({navigation}) {
 
   const handleSwipeLeft = (artistName) => {
-    navigation.navigate("Artist", {
+    navigation.navigate("Artist2", {
       artist: artistName,
     })
   }
 
   const handleSwipeRight = (artistName) => {
-    navigation.navigate("Artist2", {
+    navigation.navigate("Artist3", {
       artist: artistName,
     })
   }
@@ -143,10 +133,10 @@ const styles = StyleSheet.create({
 },
 homeButtonImage: {
     width: 30,
-    height: 30
+    height: 30,
 },
 profileButtonImage: {
     width: 25,
-    height: 33
+    height: 33,
 },
 })

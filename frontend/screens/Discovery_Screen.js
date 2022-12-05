@@ -3,8 +3,8 @@ import { StyleSheet, Text, View, Dimensions, ImageBackground, StatusBar} from 'r
 const albumCovers = {
     "album1" : require("../assets/coveralbum1.png"),
     "album2" : require("../assets/coveralbum2.png"),
-    "album3" : require("../assets/albumcover3.png"),
-    "album4" : require("../assets/album-cover.png"),
+    "album3" : require("../assets/aaaaaaaa.png"),
+    "album4" : require("../assets/irisaccc.png"),
     "album5" : require("../assets/albumcover4.png"),
     "album6" : require("../assets/coveralbum5.png")
 }
